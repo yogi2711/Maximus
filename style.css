@@ -1,0 +1,70 @@
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hamburger morph */
+#menu-btn.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+#menu-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+#menu-btn.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Efek glowing border animasi */
+.glow-border {
+  box-shadow: 0 0 10px rgba(0, 170, 255, 0.6),
+              0 0 15px rgba(0, 170, 255, 0.4),
+              0 0 30px rgba(0, 170, 255, 0.2);
+  animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 170, 255, 0.4),
+                0 0 20px rgba(0, 170, 255, 0.3),
+                0 0 30px rgba(0, 170, 255, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(0, 170, 255, 0.8),
+                0 0 25px rgba(0, 170, 255, 0.6),
+                0 0 35px rgba(0, 164, 230, 0.3);
+  }
+}
+
+/* Efek teks bercahaya biru */
+.text-glow,
+#about{
+  color: #ffffff; /* putih biar lebih kontras */
+  text-shadow:
+    0 0 8px rgba(59, 130, 246, 0.8),
+    0 0 16px rgba(59, 130, 246, 0.6),
+    0 0 25px rgba(59, 130, 246, 0.5);
+}
+
+ /* Saat hover glow makin terang */
+  .text-glow:hover,
+  #about:hover {
+    text-shadow: 0 0 8px rgba(59, 130, 246, 1),
+                 0 0 16px rgba(59, 130, 246, 0.8),
+                 0 0 30px rgba(59, 130, 246, 0.6);
+  }
+
+/* ✨ Efek angka bersinar biru */
+.glow-text {
+  text-shadow:
+    0 0 10px #3b82f6,
+    0 0 20px #3b82f6,
+    0 0 30px #60a5fa,
+    0 0 40px #93c5fd;
+  animation: glowPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes glowPulse {
+  from { text-shadow: 0 0 10px #3b82f6, 0 0 20px #3b82f6, 0 0 30px #60a5fa; }
+  to { text-shadow: 0 0 20px #60a5fa, 0 0 40px #93c5fd, 0 0 60px #bfdbfe; }
+}
